@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 개념기반 수학탐구대회</title>
+    <style>
+        /* 기본 스타일 리셋 */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Malgun Gothic', sans-serif; color: #333; line-height: 1.6; background-color: #f9f9f9; }
+        a { text-decoration: none; color: inherit; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+        /* 헤더 & 네비게이션 */
+        header { background-color: #fff; border-bottom: 1px solid #eee; position: fixed; width: 100%; top: 0; z-index: 100; }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; height: 70px; }
+        .logo { font-size: 20px; font-weight: bold; color: #1e3a8a; }
+        .nav-links { display: flex; list-style: none; }
+        .nav-links li { margin-left: 20px; font-weight: 500; }
+        .nav-links a:hover { color: #1e3a8a; }
+
+        /* 메인 비주얼 섹션 */
+        .hero { background: linear-gradient(135deg, #1e3a8a, #3b82f6); color: #fff; padding: 140px 0 80px 0; text-align: center; }
+        .hero h1 { font-size: 36px; margin-bottom: 15px; }
+        .hero p { font-size: 18px; margin-bottom: 30px; opacity: 0.9; }
+        .btn-apply { display: inline-block; background-color: #ef4444; color: #fff; padding: 12px 35px; font-weight: bold; border-radius: 30px; box-shadow: 0 4px 10px rgba(239,68,68,0.3); transition: 0.3s; }
+        .btn-apply:hover { transform: translateY(-3px); background-color: #dc2626; box-shadow: 0 6px 14px rgba(239,68,68,0.4); }
+
+        /* 공통 섹션 스타일 */
+        section { padding: 60px 0; background-color: #fff; border-bottom: 1px solid #f0f0f0; }
+        section:nth-child(even) { background-color: #fcfcfc; }
+        .section-title { font-size: 26px; font-weight: bold; margin-bottom: 30px; position: relative; padding-bottom: 10px; }
+        .section-title::after { content: ''; position: absolute; left: 0; bottom: 0; width: 50px; height: 3px; background-color: #1e3a8a; }
+
+        /* 타임라인/일정 스타일 */
+        .schedule-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+        .schedule-card { background: #fff; padding: 25px; border-radius: 8px; border: 1px solid #eee; box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
+        .schedule-card .step { font-weight: bold; color: #3b82f6; margin-bottom: 5px; }
+        .schedule-card .date { font-size: 14px; color: #777; margin-bottom: 10px; }
+        .schedule-card .title { font-size: 18px; font-weight: bold; }
+
+        /* 자료 다운로드 스타일 */
+        .download-box { display: flex; flex-direction: column; gap: 15px; }
+        .download-item { display: flex; justify-content: space-between; align-items: center; background: #fff; padding: 18px 25px; border-radius: 8px; border: 1px solid #ddd; transition: 0.2s; }
+        .download-item:hover { border-color: #3b82f6; background-color: #f8fafc; }
+        .download-btn { background-color: #1e3a8a; color: #fff; padding: 8px 18px; border-radius: 6px; font-size: 14px; font-weight: bold; transition: 0.2s; }
+        .download-btn:hover { background-color: #3b82f6; }
+
+        /* 푸터 */
+        footer { background-color: #222; color: #ccc; padding: 40px 0; font-size: 14px; }
+        .footer-text { text-align: center; line-height: 2; }
+    </style>
+</head>
+<body>
+
+    <!-- 헤더 영역 -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">📐 빛누리초등학교</div>
+            <ul class="nav-links">
+                <li><a href="#about">대회소개</a></li>
+                <li><a href="#schedule">주요일정</a></li>
+                <li><a href="#download">양식받기</a></li>
+                <li><a href="#contact">문의처</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- 메인 비주얼 영역 -->
+    <div class="hero">
+        <div class="container">
+            <h1>2026 개념기반 수학탐구대회</h1>
+            <p>수학적 개념을 깊이 있게 탐구하고, 나만의 창의적인 아이디어를 현실로 구현하세요.</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSct2NSnaEaO5p0xEDjsKLC69qYYYVtNAXvDwD27B7WWeCm-lQ/viewform?usp=sharing&ouid=103092600432830527711" target="_blank" class="btn-apply">🚀 온라인 참가 신청하기 (구글폼 접수)</a>
+        </div>
+    </div>
+
+    <!-- 대회 소개 섹션 -->
+    <section id="about">
+        <div class="container">
+            <div class="section-title">대회 소개</div>
+            <p style="font-size: 16px; margin-bottom: 15px;">본 대회는 학생들이 수학적 개념을 바탕으로 탐구 과제를 해결하고, 창의적인 산출물을 완성하는 수학융합 탐구 대회입니다.</p>
+ <p style="font-size: 16px; margin-bottom: 20px;">우리 주변의 실상활 문제를 수학적으로 해결하고 탐구하는 과정을 글, 사진, 영상(숏폼) 등 다양한 방법으로 표현해주세요.</p>
+
+            <ul style="margin-left: 20px; gap: 8px; display: flex; flex-direction: column; font-size: 16px; margin-bottom: 20px;">
+                <li><strong>주최 / 주관 :</strong> 빛누리초등학교</li>
+                <li><strong>참가 대상 :</strong> 빛누리초등학교 4~6학년 중 희망 학생</li>
+                <li><strong>참가 형태 :</strong> 개인 참가 (※ 팀 구성 없음)</li>
+                <li><strong>대회 장소 :</strong> 빛누리초등학교</li>
+            </ul>
+           
+<div style="background-color: #eff6ff; border-left: 4px solid #3b82f6; padding: 15px; border-radius: 4px; font-size: 15px;">
+                💡 <strong>【탐구 주제(예시)】</strong></p>
+▪ (실생활 문제) 생활 속 궁금증, 수학으로 해결하기
+ - 좋아하는 스포츠 경기(야구, 농구 등) 기록에서 규칙 찾기</p>
+
+▪ (수학 개념·원리) 수학 속 호기심 탐험하기
+ - 1보다 작은 세상, 분수가 나온 이유는 무엇일까?</p>
+
+▪ (수학 활용 문제) 끝없는 수학의 수수께끼에 도전하기
+ - 세상 모든 지도를 칠하려면 필요한 색깔은 최소 몇 가지일까?            </div>
+<div style="background-color: #f97316; border-left: 4px solid #3b82f6; padding: 7px; border-radius: 4px; font-size: 15px;">
+💡 <span style="color:  blue;"><strong>자율적인 탐구를 위해 내용에 제한을 두지 않으며, 학생이 자신만의 생각으로 새롭게 발견한 점이 명확히 드러나야 함</strong></span></p> </div>
+
+
+<div style="background-color: #eff6ff; border-left: 4px solid #3b82f6; padding: 15px; border-radius: 4px; font-size: 15px;">
+
+                💡 <strong>【시상규모】 총 11개 이내 시상(최우수상 1개, 우수상 1개, 특별상 9개)</strong></p>
+▪ 최우수상: 상장 및 부상(15만원 상당)</p>
+▪ 우수상: 상장 및 부상(5만원 상당)</p>
+▪ 특별상: 상장 및 부상(1만원 상당)</p>
+<body>
+
+</br>
+    <span style="text-decoration: underline blue;">   
+※ 심사 결과에 따라 시상 대상, 선정 개수는 변동 가능성이 있음</p>
+※ 필요시 2차 면접 심사(12월 중) 실시합니다 </span>
+
+</body>
+</br>  ※ 더욱 자세한 사항은 탐구 대회 추진 계획을 참고해 주세요
+
+        </div>
+    </section>
+
+    <!-- 주요 일정 섹션 -->
+    <section id="schedule">
+        <div class="container">
+            <div class="section-title">주요 일정</div>
+            <div class="schedule-grid">
+                <div class="schedule-card">
+                    <div class="step">01</div>
+                    <div class="date">2026년 11월 2일</div>
+                    <div class="title">수학 탐구 대회 공지 (자유 주제)</div>
+                </div>
+                <div class="schedule-card">
+                    <div class="step">02</div>
+                    <div class="date">2026년 11월 2일 ~ 2026년 11월 30일 16:00</div>
+                    <div class="title">온(오프)라인 접수 기간</div>
+                </div>
+                <div class="schedule-card">
+                    <div class="step">03</div>
+                    <div class="date">2026년 12월~2027년 1월 </div>
+                    <div class="title">심사 및 수상작 선정</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 서식 다운로드 섹션 -->
+    <section id="download">
+        <div class="container">
+            <div class="section-title">대회 참가 서식 다운로드</div>
+            <div class="download-box">
+                
+                <div class="download-item">
+                    <span>📄 [서식 1] 참가신청서 양식 받기</span>
+                    <a href="https://drive.google.com/file/d/1Aobil28nKF7sNhfKzGtZ9fXy4dfJfm4q/view?usp=sharing" target="_blank" class="download-btn">다운로드</a>
+                </div>
+                
+
+
+
+                <div class="download-item">
+                    <span>📄 [서식 2] 개인정보 동의서 양식 받기</span>
+                    <a href="https://drive.google.com/file/d/1KVyrEfFatNyT-MPyvI10Z9pHVwnjboPf/view?usp=sharing" target="_blank" class="download-btn">다운로드</a>
+                </div>
+
+                <div class="download-item">
+                    <span>📄 [서식 3] 윤리준수 점검표 양식 받기</span>
+                    <a href="https://drive.google.com/file/d/1x1YsW56YE60GNZiW3KBiJd-CUZ4AeRJA/view?usp=sharing" target="_blank" class="download-btn">다운로드</a>
+                </div>
+
+                <div class="download-item">
+                    <span>📄 [서식 4] 수학 탐구 노트 양식 받기</span>
+                    <a href="https://drive.google.com/file/d/1QZckryIoFwrI2BjMq-7gnHeouNrK-ZUh/view?usp=sharing" target="_blank" class="download-btn">다운로드</a>
+                </div>
+  <div class="download-item">
+                    <span>📄 [공고] 2026. 빛누리초 수학 탐구 대회 추진 계획</span>
+                    <a href="https://drive.google.com/file/d/1RZAYzqIP6zWUY0dCR917njSpH7noQWum/view?usp=drive_link" target="_blank" class="download-btn">다운로드</a>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 푸터 및 문의처 (하단 주최/주관 정돈 완료) -->
+    <footer id="contact">
+        <div class="container footer-text">
+            <p><strong>주최 / 주관 :</strong> 빛누리초등학교</p>
+            <p><strong>대회 문의 :</strong> 빛누리초 영재교육 (☎ 0507-8017-1307) / <strong>오프라인 서식 및 접수 문의 :</strong> 4학년 9반</p>
+            <p style="margin-top: 20px; color: #777;">&copy; 2026 개념기반 수학탐구대회 운영위원회. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
